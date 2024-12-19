@@ -2,13 +2,13 @@
   margin: 0;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .buttonsContainer {
   margin-bottom: 20px;
   display: grid;
-  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
   gap: 10px;
 }
 
@@ -27,9 +27,8 @@ button{
 .gridContainer {
   display: grid;
   gap: 0;
-  width: 100vw;
-  height: calc(100vh - 60px);
-  max-width: 100vh;
-  max-height: calc(100vh - 60px);
+  width: 730px;
+  height: 730px;
   margin: 0 auto;
+  margin-top: 20px;;
 }
