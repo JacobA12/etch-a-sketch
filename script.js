@@ -26,23 +26,23 @@ buttons.appendChild(setSizeButton);
 setSizeButton.addEventListener("click", () => {
   const squareDivs = document.querySelectorAll(".square");
   if (squareDivs.length > 0) {
-    gridContainer.innerHTML = ""
+    gridContainer.innerHTML = "";
   }
-  let dimensions = prompt("Enter width x height *MAX IS 64x64*:", "16x16");
-  let [width, height] = dimensions.split("x").map(Number);
-  if (width <= 64 && height <= 64) {
-    for (let index = 0; index < width * height; index++) {
+  let size = prompt("Enter size of square grid *MAX IS 64*:", "16");
+
+  if (size <= 64) {
+    for (let index = 0; index < size * size; index++) {
       const square = document.createElement("div");
       square.classList.add("square");
       square.addEventListener("mouseenter", () => {
         square.style.backgroundColor = "lightblue";
       });
-      gridContainer.style.gridTemplateColumns = `repeat(${width}, 1fr)`;
-      gridContainer.style.gridTemplateRows = `repeat(${height}, 1fr)`;
+      gridContainer.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+      gridContainer.style.gridTemplateRows = `repeat(${size}, 1fr)`;
       gridContainer.appendChild(square);
     }
   } else {
-    alert("The maximum grid size is 64x64, Please enter a smaller size");
+    alert("The maximum grid size is 64, Please enter a smaller size");
     return;
   }
 });
