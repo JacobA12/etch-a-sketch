@@ -1,0 +1,22 @@
+.container {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  width: 960px;
+}
+
+.buttons {
+  margin-bottom: 20px;
+}
+
+.square {
+  width: 25px;
+  height: 25px;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+
+.gridContainer{
+  display: grid;
+  
+}
